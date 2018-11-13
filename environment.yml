@@ -1,0 +1,17 @@
+name: textbook
+
+channels:
+  - conda-forge
+
+dependencies:
+  - pip:
+    - bs4
+    - tqdm
+    - notebook
+    - numpy
+    - datascience
+    - pyyaml
+    - nbformat
+    - nbclean
+    - nbgitpuller
+    - -r ./binder/requirements.txt
