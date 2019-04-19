@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/18/2/making-decisions"
 interact_link: content/chapters/18/2/Making_Decisions.ipynb
+kernel_name: python3
 title: 'Making Decisions'
 prev_page:
   url: /chapters/18/1/More_Likely_than_Not_Binary_Classifier
@@ -11,6 +12,12 @@ next_page:
   title: ''
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
+
+
+
 
 ### Making Decisions
 A primary use of Bayes' Rule is to make decisions based on incomplete information, incorporating new information as it comes in. This section points out the importance of keeping your assumptions in mind as you make decisions.
@@ -49,7 +56,7 @@ We can answer this by applying Bayes' Rule and using our "more likely than not" 
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.44295302013422816
 ```
@@ -77,7 +84,7 @@ population(0.004).pivot('Test Result', 'True Condition')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -112,7 +119,7 @@ Among the Positives, the proportion that have the disease is:
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.4429530201342282
 ```
@@ -162,7 +169,7 @@ Given that the patient tests Positive, the chance that he or she has the disease
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.9124423963133641
 ```
@@ -189,7 +196,7 @@ population(0.05).pivot('Test Result', 'True Condition')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -222,7 +229,7 @@ In this artificially created population of 100,000 people, 5000 people (5%) have
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.9124423963133641
 ```
@@ -256,7 +263,7 @@ positive.where('True Condition', are.equal_to('Disease')).num_rows/positive.num_
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.906896551724138
 ```

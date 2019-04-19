@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/06/1/sorting-rows"
 interact_link: content/chapters/06/1/Sorting_Rows.ipynb
+kernel_name: python3
 title: 'Sorting Rows'
 prev_page:
   url: /chapters/06/Tables
@@ -11,6 +12,9 @@ next_page:
   title: 'Selecting Rows'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # Sorting Rows
 
@@ -42,7 +46,7 @@ nba_salaries
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -98,7 +102,7 @@ nba_salaries.show(3)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -132,7 +136,7 @@ nba_salaries.sort('PLAYER').show(5)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -179,7 +183,7 @@ nba.sort('SALARY')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -241,7 +245,7 @@ nba.sort('SALARY', descending=True)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -300,7 +304,7 @@ help(nba.sort)
 ```
 
 
-{:.output_stream}
+{:.output .output_stream}
 ```
 Help on method sort in module datascience.tables:
 

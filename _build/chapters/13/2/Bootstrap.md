@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/13/2/bootstrap"
 interact_link: content/chapters/13/2/Bootstrap.ipynb
+kernel_name: python3
 title: 'The Bootstrap'
 prev_page:
   url: /chapters/13/1/Percentiles
@@ -11,6 +12,9 @@ next_page:
   title: 'Confidence Intervals'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### The Bootstrap
 A data scientist is using the data in a random sample to estimate an unknown parameter. She uses the sample to calculate the value of a statistic that she will use as her estimate. 
@@ -51,7 +55,7 @@ sf2015
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -109,7 +113,7 @@ sf2015.where('Job', are.equal_to('Mayor'))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -141,7 +145,7 @@ sf2015.sort('Total Compensation')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -207,7 +211,7 @@ sf2015.num_rows
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 36569
 ```
@@ -227,7 +231,9 @@ sf2015.select('Total Compensation').hist(bins=sf_bins)
 
 
 
-![png](../../../images/chapters/13/2/Bootstrap_13_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_14_0.png)
+
 
 
 While most of the values are below \\$300,000, a few are quite a bit higher. For example, the total compensation of the Chief Investment Officer was almost \\$650,000. That is why the horizontal axis stretches to \\$700,000.
@@ -241,7 +247,7 @@ sf2015.sort('Total Compensation', descending=True).show(2)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -277,7 +283,7 @@ pop_median
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 110305.79
 ```
@@ -303,7 +309,9 @@ our_sample.select('Total Compensation').hist(bins=sf_bins)
 
 
 
-![png](../../../images/chapters/13/2/Bootstrap_20_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_21_0.png)
+
 
 
 
@@ -318,7 +326,7 @@ est_median
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 108405.39
 ```
@@ -347,6 +355,18 @@ If we drew 500 times at random *without* replacement from our sample of size 500
 
 Why is this a good idea? By the law of averages, the distribution of the original sample is likely to resemble the population, and the distributions of all the "resamples" are likely to resemble the original sample. So the distributions of all the resamples are likely to resemble the population as well. 
 
+
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_25_0.png)
+
+
+
+
 ### A Resampled Median
 Recall that when the `sample` method is used without specifying a sample size, by default the sample size equals the number of rows of the table from which the sample is drawn. That's perfect for the bootstrap! Here is one new sample drawn from the original sample, and the corresponding sample median.
 
@@ -367,7 +387,9 @@ resample_1.select('Total Compensation').hist(bins=sf_bins)
 
 
 
-![png](../../../images/chapters/13/2/Bootstrap_26_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_28_0.png)
+
 
 
 
@@ -382,7 +404,7 @@ resampled_median_1
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 108366.9
 ```
@@ -404,7 +426,7 @@ resampled_median_2
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 110391.29
 ```
@@ -464,7 +486,9 @@ plots.scatter(pop_median, 0, color='red', s=30);
 
 
 
-![png](../../../images/chapters/13/2/Bootstrap_35_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_37_0.png)
+
 
 
 It is important to remember that the red dot is fixed: it is \\$110,305.79, the population median. The empirical histogram is the result of random draws, and will be situated randomly relative to the red dot. 
@@ -489,7 +513,7 @@ left
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 102285.4
 ```
@@ -508,7 +532,7 @@ right
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 115557.27
 ```
@@ -531,7 +555,9 @@ plots.scatter(pop_median, 0, color='red', s=30, zorder=2);
 
 
 
-![png](../../../images/chapters/13/2/Bootstrap_41_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_43_0.png)
+
 
 
 The "middle 95%" interval of estimates captured the parameter in our example. But was that a fluke? 
@@ -584,7 +610,7 @@ intervals
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -642,7 +668,7 @@ pop_median
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 110305.79
 ```
@@ -662,7 +688,7 @@ intervals.where('Left', are.below(pop_median)).where('Right', are.above(pop_medi
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 97
 ```
@@ -678,6 +704,15 @@ The red line is where the parameter is. Good intervals cover the parameter; ther
 If an interval doesn't cover the parameter, it's a dud. The duds are the ones where you can see "daylight" around the red line. There are very few of them – about 5, typically – but they do happen. 
 
 Any method based on sampling has the possibility of being off. The beauty of methods based on random sampling is that we can quantify how often they are likely to be off.
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/13/2/Bootstrap_53_0.png)
+
+
 
 To summarize what the simulation shows, suppose you are estimating the population median by the following process: 
 

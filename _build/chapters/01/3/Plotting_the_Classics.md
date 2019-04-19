@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/01/3/plotting-the-classics"
 interact_link: content/chapters/01/3/Plotting_the_Classics.ipynb
+kernel_name: python3
 title: 'Plotting the Classics'
 prev_page:
   url: /chapters/01/2/why-data-science
@@ -11,6 +12,9 @@ next_page:
   title: 'Literary Characters'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # Plotting the classics
 
@@ -51,7 +55,7 @@ Table().with_column('Chapters', huck_finn_chapters)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

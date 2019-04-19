@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/06/2/selecting-rows"
 interact_link: content/chapters/06/2/Selecting_Rows.ipynb
+kernel_name: python3
 title: 'Selecting Rows'
 prev_page:
   url: /chapters/06/1/Sorting_Rows
@@ -11,6 +12,12 @@ next_page:
   title: 'Example: Population Trends'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
+
+
+
 
 # Selecting Rows
 
@@ -32,7 +39,7 @@ nba
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -88,7 +95,7 @@ nba.take(0)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -120,7 +127,7 @@ nba.take(np.arange(3, 6))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -156,7 +163,7 @@ nba.sort('SALARY', descending=True).take(np.arange(5))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -207,7 +214,7 @@ nba.where('SALARY', are.above(10))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -267,7 +274,7 @@ nba.where('SALARY', are.above(10)).sort('SALARY')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -325,7 +332,7 @@ nba.where('PLAYER', are.equal_to('Stephen Curry'))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -355,7 +362,7 @@ nba.where('TEAM', are.equal_to('Golden State Warriors')).show()
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -425,7 +432,7 @@ nba.where('TEAM', 'Denver Nuggets') # equivalent to nba.where('TEAM', are.equal_
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -484,7 +491,7 @@ nba.where('POSITION', 'PG').where('SALARY', are.above(15))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -529,7 +536,7 @@ nba.where('SALARY', are.between(10, 10.3))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -570,7 +577,7 @@ nba.where('PLAYER', are.equal_to('Barack Obama'))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -621,7 +628,7 @@ nba.where('TEAM', are.containing('Warriors')).show()
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -689,7 +696,7 @@ nba.where('POSITION', are.containing('G'))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -748,7 +755,7 @@ other_than_Cavs.where('SALARY', are.not_below(20))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -802,7 +809,7 @@ other_than_Cavs.where('SALARY', are.above_or_equal_to(20))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

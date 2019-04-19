@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/01/3/1/literary-characters"
 interact_link: content/chapters/01/3/1/Literary_Characters.ipynb
+kernel_name: python3
 title: 'Literary Characters'
 prev_page:
   url: /chapters/01/3/Plotting_the_Classics
@@ -11,6 +12,12 @@ next_page:
   title: 'Another Kind of Character'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
+
+
+
 
 # Literary Characters
 
@@ -38,7 +45,9 @@ plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 
 
 
-![png](../../../../images/chapters/01/3/1/Literary_Characters_1_0.png)
+{:.output .output_png}
+![png](../../../../images/chapters/01/3/1/Literary_Characters_3_0.png)
+
 
 
 In the plot above, the horizontal axis shows chapter numbers and the vertical axis shows how many times each character has been mentioned up to and including that chapter. 
@@ -60,7 +69,7 @@ Table().with_column('Chapters', little_women_chapters)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -171,7 +180,9 @@ plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 
 
 
-![png](../../../../images/chapters/01/3/1/Literary_Characters_6_0.png)
+{:.output .output_png}
+![png](../../../../images/chapters/01/3/1/Literary_Characters_8_0.png)
+
 
 
 Laurie is a young man who marries one of the girls in the end. See if you can use the plots to guess which one.

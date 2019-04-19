@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/17/2/training-and-testing"
 interact_link: content/chapters/17/2/Training_and_Testing.ipynb
+kernel_name: python3
 title: 'Training and Testing'
 prev_page:
   url: /chapters/17/1/Nearest_Neighbors
@@ -11,6 +12,21 @@ next_page:
   title: 'Rows of Tables'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Training and Testing
 How good is our nearest neighbor classifier? To answer this we'll need to find out how frequently our classifications are correct. If a patient has chronic kidney disease, how likely is our classifier to pick that up?
@@ -39,7 +55,9 @@ ckd.scatter('White Blood Cell Count', 'Glucose', colors='Color')
 
 
 
-![png](../../../images/chapters/17/2/Training_and_Testing_2_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/17/2/Training_and_Testing_7_0.png)
+
 
 
 Earlier, we said that we expect to get some classifications wrong, because there's some intermingling of blue and gold points in the lower-left.
@@ -95,11 +113,37 @@ plt.ylim(-2, 6);
 
 
 
-![png](../../../images/chapters/17/2/Training_and_Testing_8_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/17/2/Training_and_Testing_13_0.png)
+
 
 
 We get the following classification regions and decision boundary:
 
+
+
+
+
+
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/17/2/Training_and_Testing_17_0.png)
+
+
+
 Place the *test* data on this graph and you can see at once that while the classifier got almost all the points right, there are some mistakes.  For example, some blue points of the test set fall in the gold region of the classifier.
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/17/2/Training_and_Testing_19_0.png)
+
+
 
 Some errors notwithstanding, it looks like the classifier does fairly well on the test set. Assuming that the original sample was drawn randomly from the underlying population, the hope is that the classifier will perform with similar accuracy on the overall population, since the test set was chosen randomly from the original sample.

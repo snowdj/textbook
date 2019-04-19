@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/14/2/variability"
 interact_link: content/chapters/14/2/Variability.ipynb
+kernel_name: python3
 title: 'Variability'
 prev_page:
   url: /chapters/14/1/Properties_of_the_Mean
@@ -11,6 +12,9 @@ next_page:
   title: 'The SD and the Normal Curve'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Variability
 The mean tells us where a histogram balances. But in almost every histogram we have seen, the values spread out on both sides of the mean. How far from the mean can they be? To answer this question, we will develop a measure of variability about the mean.
@@ -44,7 +48,7 @@ mean
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.75
 ```
@@ -71,7 +75,7 @@ calculation_steps
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -112,7 +116,7 @@ sum(deviations)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.0
 ```
@@ -134,7 +138,7 @@ np.mean(deviations)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.0
 ```
@@ -164,7 +168,7 @@ calculation_steps
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -204,7 +208,7 @@ variance
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 13.1875
 ```
@@ -233,7 +237,7 @@ sd
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.6314597615834874
 ```
@@ -259,7 +263,7 @@ np.std(any_numbers)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.6314597615834874
 ```
@@ -282,7 +286,7 @@ nba13
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -338,7 +342,9 @@ nba13.select('Height').hist(bins=np.arange(68, 88, 1))
 
 
 
-![png](../../../images/chapters/14/2/Variability_21_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/14/2/Variability_22_0.png)
+
 
 
 It is no surprise that NBA players are tall! Their average height is just over 79 inches (6'7"), about 10 inches taller than the average height of men in the United States.
@@ -355,7 +361,7 @@ mean_height
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 79.06534653465347
 ```
@@ -376,7 +382,7 @@ sd_height
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.4505971830275546
 ```
@@ -394,7 +400,7 @@ nba13.sort('Height', descending=True).show(3)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -430,7 +436,7 @@ Thabeet was about 8 inches above the average height.
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 7.934653465346528
 ```
@@ -450,7 +456,7 @@ That's a deviation from average, and it is about 2.3 times the standard deviatio
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 2.2995015194397923
 ```
@@ -470,7 +476,7 @@ nba13.sort('Height').show(3)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -504,7 +510,7 @@ nba13.sort('Height').show(3)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 -2.9169868288775844
 ```
@@ -532,7 +538,9 @@ nba13.select('Age in 2013').hist(bins=np.arange(15, 45, 1))
 
 
 
-![png](../../../images/chapters/14/2/Variability_38_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/14/2/Variability_39_0.png)
+
 
 
 
@@ -549,7 +557,7 @@ mean_age, sd_age
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 (26.19009900990099, 4.321200441720307)
 ```
@@ -571,7 +579,7 @@ nba13.sort('Age in 2013', descending=True).show(3)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -607,7 +615,7 @@ Howard's age was about 3.2 SDs above average.
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.1958482778922357
 ```
@@ -625,7 +633,7 @@ nba13.sort('Age in 2013').show(3)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -659,7 +667,7 @@ nba13.sort('Age in 2013').show(3)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 -2.589581103867081
 ```
@@ -729,7 +737,7 @@ united
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -789,7 +797,7 @@ united.sort('Delay', descending=True)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -850,7 +858,7 @@ within_3_sd.num_rows/united.num_rows
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.9790235081374322
 ```
@@ -869,5 +877,7 @@ plots.xticks(np.arange(-6, 17, 3));
 
 
 
-![png](../../../images/chapters/14/2/Variability_58_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/14/2/Variability_59_0.png)
+
 

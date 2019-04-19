@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/17/classification"
 interact_link: content/chapters/17/Classification.ipynb
+kernel_name: python3
 title: 'Classification'
 prev_page:
   url: /chapters/16/3/Prediction_Intervals
@@ -11,6 +12,9 @@ next_page:
   title: 'Nearest Neighbors'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Classification
 

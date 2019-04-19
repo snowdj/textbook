@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/05/3/more-on-arrays"
 interact_link: content/chapters/05/3/More_on_Arrays.ipynb
+kernel_name: python3
 title: 'More on Arrays'
 prev_page:
   url: /chapters/05/2/Ranges
@@ -11,6 +12,9 @@ next_page:
   title: 'Tables'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # More on Arrays
 It's often necessary to compute something that involves data from more than one array. If two arrays are of the same size, Python makes it easy to do calculations involving both arrays.
@@ -33,7 +37,7 @@ highs
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([ 13.6  ,  14.387,  14.585,  15.164])
 ```
@@ -54,7 +58,7 @@ lows
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([ 2.128,  2.371,  2.874,  3.728])
 ```
@@ -81,7 +85,7 @@ make_array(
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([ 11.472,  12.016,  11.711,  11.436])
 ```
@@ -101,7 +105,7 @@ highs - lows
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([ 11.472,  12.016,  11.711,  11.436])
 ```
@@ -155,7 +159,7 @@ Remember that `np.prod` multiplies all the elements of an array together. Now we
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.1415910827951143
 ```

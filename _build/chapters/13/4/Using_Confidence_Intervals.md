@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/13/4/using-confidence-intervals"
 interact_link: content/chapters/13/4/Using_Confidence_Intervals.ipynb
+kernel_name: Python [Root]
 title: 'Using Confidence Intervals'
 prev_page:
   url: /chapters/13/3/Confidence_Intervals
@@ -11,6 +12,9 @@ next_page:
   title: 'Why the Mean Matters'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 
 
@@ -104,7 +108,9 @@ baby.select('Maternal Age').hist()
 
 
 
-![png](../../../images/chapters/13/4/Using_Confidence_Intervals_5_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/4/Using_Confidence_Intervals_6_0.png)
+
 
 
 A small percent of the sampled ages are in the (26.9, 27.6) interval, and you would expect a similar small percent in the population. The interval just estimates one number: the *average* of all the ages in the population.
@@ -159,7 +165,7 @@ hodgkins
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -229,7 +235,7 @@ hodgkins
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -283,7 +289,9 @@ hodgkins.select('drop').hist(bins=np.arange(-20, 81, 20))
 
 
 
-![png](../../../images/chapters/13/4/Using_Confidence_Intervals_16_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/4/Using_Confidence_Intervals_17_0.png)
+
 
 
 
@@ -297,7 +305,7 @@ np.mean(hodgkins.column('drop'))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 28.615909090909096
 ```
@@ -330,7 +338,7 @@ make_array(left, right)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([17.22636364, 40.54045455])
 ```
@@ -350,7 +358,9 @@ plots.plot(make_array(left, right), make_array(0, 0), color='yellow', lw=8);
 
 
 
-![png](../../../images/chapters/13/4/Using_Confidence_Intervals_20_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/13/4/Using_Confidence_Intervals_21_0.png)
+
 
 
 The 99% confidence interval for the average drop in the population goes from about 17 to about 40. The interval doesn't contain 0. So we reject the null hypothesis.

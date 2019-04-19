@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/15/prediction"
 interact_link: content/chapters/15/Prediction.ipynb
+kernel_name: Python [Root]
 title: 'Prediction'
 prev_page:
   url: /chapters/14/6/Choosing_a_Sample_Size
@@ -11,6 +12,9 @@ next_page:
   title: 'Correlation'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Prediction
 
@@ -44,7 +48,7 @@ heights
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -98,7 +102,9 @@ heights.scatter('MidParent')
 
 
 
-![png](../../images/chapters/15/Prediction_4_0.png)
+{:.output .output_png}
+![png](../../images/chapters/15/Prediction_5_0.png)
+
 
 
 The primary reason for collecting the data was to be able to predict the adult height of a child born to parents similar to those in the dataset. We made these predictions in Section 7.1, after noticing the positive association between the two variables. 
@@ -147,7 +153,9 @@ heights_with_predictions.scatter('MidParent')
 
 
 
-![png](../../images/chapters/15/Prediction_9_0.png)
+{:.output .output_png}
+![png](../../images/chapters/15/Prediction_10_0.png)
+
 
 
 The prediction at a given midparent height lies roughly at the center of the vertical strip of points at the given height. This method of prediction is called *regression.* Later in this chapter we will see where this term came from. We will also see whether we can avoid our arbitrary definitions of "closeness" being "within 0.5 inches". But first we will develop a measure that can be used in many settings to decide how good one variable will be as a predictor of another.

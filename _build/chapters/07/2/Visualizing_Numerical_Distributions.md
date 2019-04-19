@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/07/2/visualizing-numerical-distributions"
 interact_link: content/chapters/07/2/Visualizing_Numerical_Distributions.ipynb
+kernel_name: python3
 title: 'Numerical Distributions'
 prev_page:
   url: /chapters/07/1/Visualizing_Categorical_Distributions
@@ -11,6 +12,9 @@ next_page:
   title: 'Overlaid Graphs'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Visualizing Numerical Distributions
 
@@ -37,7 +41,7 @@ top.set_format([2, 3], NumberFormatter)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -46,43 +50,34 @@ top.set_format([2, 3], NumberFormatter)
     </thead>
     <tbody>
         <tr>
-            <td>Star Wars: The Force Awakens             </td> <td>Buena Vista (Disney)</td> <td>906,723,418</td> <td>906,723,400     </td> <td>2,015</td>
+            <td>Star Wars: The Force Awakens             </td> <td>Buena Vista (Disney)</td> <td>906,723,418</td> <td>906,723,400     </td> <td>2015</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Avatar                                   </td> <td>Fox                 </td> <td>760,507,625</td> <td>846,120,800     </td> <td>2,009</td>
+            <td>Avatar                                   </td> <td>Fox                 </td> <td>760,507,625</td> <td>846,120,800     </td> <td>2009</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Titanic                                  </td> <td>Paramount           </td> <td>658,672,302</td> <td>1,178,627,900   </td> <td>1,997</td>
+            <td>Titanic                                  </td> <td>Paramount           </td> <td>658,672,302</td> <td>1,178,627,900   </td> <td>1997</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Jurassic World                           </td> <td>Universal           </td> <td>652,270,625</td> <td>687,728,000     </td> <td>2,015</td>
+            <td>Jurassic World                           </td> <td>Universal           </td> <td>652,270,625</td> <td>687,728,000     </td> <td>2015</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Marvel's The Avengers                    </td> <td>Buena Vista (Disney)</td> <td>623,357,910</td> <td>668,866,600     </td> <td>2,012</td>
+            <td>Marvel's The Avengers                    </td> <td>Buena Vista (Disney)</td> <td>623,357,910</td> <td>668,866,600     </td> <td>2012</td>
         </tr>
-    </tbody>
         <tr>
-            <td>The Dark Knight                          </td> <td>Warner Bros.        </td> <td>534,858,444</td> <td>647,761,600     </td> <td>2,008</td>
+            <td>The Dark Knight                          </td> <td>Warner Bros.        </td> <td>534,858,444</td> <td>647,761,600     </td> <td>2008</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Star Wars: Episode I - The Phantom Menace</td> <td>Fox                 </td> <td>474,544,677</td> <td>785,715,000     </td> <td>1,999</td>
+            <td>Star Wars: Episode I - The Phantom Menace</td> <td>Fox                 </td> <td>474,544,677</td> <td>785,715,000     </td> <td>1999</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Star Wars                                </td> <td>Fox                 </td> <td>460,998,007</td> <td>1,549,640,500   </td> <td>1,977</td>
+            <td>Star Wars                                </td> <td>Fox                 </td> <td>460,998,007</td> <td>1,549,640,500   </td> <td>1977</td>
         </tr>
-    </tbody>
         <tr>
-            <td>Avengers: Age of Ultron                  </td> <td>Buena Vista (Disney)</td> <td>459,005,868</td> <td>465,684,200     </td> <td>2,015</td>
+            <td>Avengers: Age of Ultron                  </td> <td>Buena Vista (Disney)</td> <td>459,005,868</td> <td>465,684,200     </td> <td>2015</td>
         </tr>
-    </tbody>
         <tr>
-            <td>The Dark Knight Rises                    </td> <td>Warner Bros.        </td> <td>448,139,099</td> <td>500,961,700     </td> <td>2,012</td>
+            <td>The Dark Knight Rises                    </td> <td>Warner Bros.        </td> <td>448,139,099</td> <td>500,961,700     </td> <td>2012</td>
         </tr>
     </tbody>
 </table>
@@ -108,7 +103,7 @@ millions
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -119,39 +114,30 @@ millions
         <tr>
             <td>Star Wars: The Force Awakens             </td> <td>906.72        </td>
         </tr>
-    </tbody>
         <tr>
             <td>Avatar                                   </td> <td>846.12        </td>
         </tr>
-    </tbody>
         <tr>
             <td>Titanic                                  </td> <td>1178.63       </td>
         </tr>
-    </tbody>
         <tr>
             <td>Jurassic World                           </td> <td>687.73        </td>
         </tr>
-    </tbody>
         <tr>
             <td>Marvel's The Avengers                    </td> <td>668.87        </td>
         </tr>
-    </tbody>
         <tr>
             <td>The Dark Knight                          </td> <td>647.76        </td>
         </tr>
-    </tbody>
         <tr>
             <td>Star Wars: Episode I - The Phantom Menace</td> <td>785.72        </td>
         </tr>
-    </tbody>
         <tr>
             <td>Star Wars                                </td> <td>1549.64       </td>
         </tr>
-    </tbody>
         <tr>
             <td>Avengers: Age of Ultron                  </td> <td>465.68        </td>
         </tr>
-    </tbody>
         <tr>
             <td>The Dark Knight Rises                    </td> <td>500.96        </td>
         </tr>
@@ -176,7 +162,9 @@ millions.hist('Adjusted Gross', unit="Million Dollars")
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_6_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_7_0.png)
+
 
 
 ### The Horizontal Axis
@@ -202,7 +190,9 @@ millions.hist('Adjusted Gross', bins=np.arange(300,2001,100), unit="Million Doll
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_8_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_9_0.png)
+
 
 
 The horizontal axis of this figure is easier to read. The labels 200, 400, 600, and so on are centered at the corresponding values. The tallest bar is for movies that grossed between 300 million and 400 million dollars. 
@@ -223,7 +213,7 @@ bin_counts.show()
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -232,75 +222,58 @@ bin_counts.show()
     </thead>
     <tbody>
         <tr>
-            <td>300  </td> <td>81                  </td>
+            <td>300 </td> <td>81                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>400  </td> <td>52                  </td>
+            <td>400 </td> <td>52                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>500  </td> <td>28                  </td>
+            <td>500 </td> <td>28                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>600  </td> <td>16                  </td>
+            <td>600 </td> <td>16                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>700  </td> <td>7                   </td>
+            <td>700 </td> <td>7                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>800  </td> <td>5                   </td>
+            <td>800 </td> <td>5                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>900  </td> <td>3                   </td>
+            <td>900 </td> <td>3                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,000</td> <td>1                   </td>
+            <td>1000</td> <td>1                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,100</td> <td>3                   </td>
+            <td>1100</td> <td>3                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,200</td> <td>2                   </td>
+            <td>1200</td> <td>2                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,300</td> <td>0                   </td>
+            <td>1300</td> <td>0                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,400</td> <td>0                   </td>
+            <td>1400</td> <td>0                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,500</td> <td>1                   </td>
+            <td>1500</td> <td>1                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,600</td> <td>0                   </td>
+            <td>1600</td> <td>0                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,700</td> <td>1                   </td>
+            <td>1700</td> <td>1                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,800</td> <td>0                   </td>
+            <td>1800</td> <td>0                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,900</td> <td>0                   </td>
+            <td>1900</td> <td>0                   </td>
         </tr>
-    </tbody>
         <tr>
-            <td>2,000</td> <td>0                   </td>
+            <td>2000</td> <td>0                   </td>
         </tr>
     </tbody>
 </table>
@@ -320,7 +293,9 @@ bin_counts.hist('Adjusted Gross count', bin_column='bin', unit='Million Dollars'
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_13_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_14_0.png)
+
 
 
 ### The Vertical Axis: Density Scale
@@ -349,7 +324,7 @@ heights
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -358,43 +333,34 @@ heights
     </thead>
     <tbody>
         <tr>
-            <td>300  </td> <td>81   </td> <td>40.5   </td> <td>0.405 </td>
+            <td>300 </td> <td>81   </td> <td>40.5   </td> <td>0.405 </td>
         </tr>
-    </tbody>
         <tr>
-            <td>400  </td> <td>52   </td> <td>26     </td> <td>0.26  </td>
+            <td>400 </td> <td>52   </td> <td>26     </td> <td>0.26  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>500  </td> <td>28   </td> <td>14     </td> <td>0.14  </td>
+            <td>500 </td> <td>28   </td> <td>14     </td> <td>0.14  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>600  </td> <td>16   </td> <td>8      </td> <td>0.08  </td>
+            <td>600 </td> <td>16   </td> <td>8      </td> <td>0.08  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>700  </td> <td>7    </td> <td>3.5    </td> <td>0.035 </td>
+            <td>700 </td> <td>7    </td> <td>3.5    </td> <td>0.035 </td>
         </tr>
-    </tbody>
         <tr>
-            <td>800  </td> <td>5    </td> <td>2.5    </td> <td>0.025 </td>
+            <td>800 </td> <td>5    </td> <td>2.5    </td> <td>0.025 </td>
         </tr>
-    </tbody>
         <tr>
-            <td>900  </td> <td>3    </td> <td>1.5    </td> <td>0.015 </td>
+            <td>900 </td> <td>3    </td> <td>1.5    </td> <td>0.015 </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,000</td> <td>1    </td> <td>0.5    </td> <td>0.005 </td>
+            <td>1000</td> <td>1    </td> <td>0.5    </td> <td>0.005 </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,100</td> <td>3    </td> <td>1.5    </td> <td>0.015 </td>
+            <td>1100</td> <td>3    </td> <td>1.5    </td> <td>0.015 </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,200</td> <td>2    </td> <td>1      </td> <td>0.01  </td>
+            <td>1200</td> <td>2    </td> <td>1      </td> <td>0.01  </td>
         </tr>
     </tbody>
 </table>
@@ -408,11 +374,13 @@ Go over the numbers on the vertical axis of the histogram above to check that th
 The calculations will become clear if we just examine the first row of the table. 
 
 Remember that there are 200 movies in the dataset. The [300, 400) bin contains 81 movies. That's 40.5% of all the movies:
+
 $$
 \mbox{Percent} = \frac{81}{200} \cdot 100 = 40.5
 $$
 
 The width of the [300, 400) bin is $ 400 - 300 = 100$. So
+
 $$
 \mbox{Height} = \frac{40.5}{100} = 0.405
 $$
@@ -438,7 +406,9 @@ millions.hist('Adjusted Gross', bins=uneven, unit="Million Dollars")
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_20_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_21_0.png)
+
 
 
 Here are the counts in the three bins.
@@ -454,7 +424,7 @@ millions.bin('Adjusted Gross', bins=uneven)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -463,19 +433,16 @@ millions.bin('Adjusted Gross', bins=uneven)
     </thead>
     <tbody>
         <tr>
-            <td>300  </td> <td>81                  </td>
+            <td>300 </td> <td>81                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>400  </td> <td>80                  </td>
+            <td>400 </td> <td>80                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>600  </td> <td>37                  </td>
+            <td>600 </td> <td>37                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,500</td> <td>0                   </td>
+            <td>1500</td> <td>0                   </td>
         </tr>
     </tbody>
 </table>
@@ -499,7 +466,9 @@ millions.hist('Adjusted Gross', bins=np.arange(300,2001,100), normed=False)
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_25_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_26_0.png)
+
 
 
 While the count scale is perhaps more natural to interpret than the density scale, the chart becomes highly misleading when bins have different widths. Below, it appears (due to the count scale) that high-grossing movies are quite common, when in fact we have seen that they are relatively rare.
@@ -513,7 +482,9 @@ millions.hist('Adjusted Gross', bins=uneven, normed=False)
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_27_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_28_0.png)
+
 
 
 Even though the method used is called `hist`, **the figure above is NOT A HISTOGRAM.** It misleadingly exaggerates the proportion of movies grossing at least 600 million dollars. The height of each bar is simply plotted at the number of movies in the bin, *without accounting for the difference in the widths of the bins*. 
@@ -530,7 +501,9 @@ millions.hist('Adjusted Gross', bins=very_uneven, normed=False)
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_29_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_30_0.png)
+
 
 
 In this count-based figure, the shape of the distribution of movies is lost entirely.
@@ -585,7 +558,9 @@ millions.hist('Adjusted Gross', bins=uneven, unit="Million Dollars")
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_33_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_34_0.png)
+
 
 
 To see this, let us split the [300, 400) bin into 10 narrower bins, each of width 10 million dollars.
@@ -600,7 +575,9 @@ millions.hist('Adjusted Gross', bins=some_tiny_bins, unit='Million Dollars')
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_35_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_36_0.png)
+
 
 
 Some of the skinny bars are taller than 0.405 and others are shorter; the first two have heights of 0 because there are no data between 300 and 320. By putting a flat top at the level 0.405 across the whole bin, we are deciding to ignore the finer detail and are using the flat level as a rough approximation. Often, though not always, this is sufficient for understanding the general shape of the distribution.
@@ -626,7 +603,9 @@ millions.hist('Adjusted Gross', bins=uneven_again, unit='Million Dollars')
 
 
 
-![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_40_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/07/2/Visualizing_Numerical_Distributions_41_0.png)
+
 
 
 
@@ -640,7 +619,7 @@ millions.bin('Adjusted Gross', bins=uneven_again)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -649,23 +628,19 @@ millions.bin('Adjusted Gross', bins=uneven_again)
     </thead>
     <tbody>
         <tr>
-            <td>300  </td> <td>32                  </td>
+            <td>300 </td> <td>32                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>350  </td> <td>49                  </td>
+            <td>350 </td> <td>49                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>400  </td> <td>25                  </td>
+            <td>400 </td> <td>25                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>450  </td> <td>92                  </td>
+            <td>450 </td> <td>92                  </td>
         </tr>
-    </tbody>
         <tr>
-            <td>1,500</td> <td>0                   </td>
+            <td>1500</td> <td>0                   </td>
         </tr>
     </tbody>
 </table>

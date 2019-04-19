@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/14/1/properties-of-the-mean"
 interact_link: content/chapters/14/1/Properties_of_the_Mean.ipynb
+kernel_name: python3
 title: 'Properties of the Mean'
 prev_page:
   url: /chapters/14/Why_the_Mean_Matters
@@ -11,6 +12,9 @@ next_page:
   title: 'Variability'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Properties of the Mean
 
@@ -39,7 +43,7 @@ np.average(not_symmetric)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 4.25
 ```
@@ -57,7 +61,7 @@ np.mean(not_symmetric)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 4.25
 ```
@@ -95,7 +99,7 @@ sum(zero_one)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3
 ```
@@ -113,7 +117,7 @@ np.mean(zero_one)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.75
 ```
@@ -133,7 +137,7 @@ np.mean(make_array(True, True, True, False))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.75
 ```
@@ -147,13 +151,13 @@ The mean of the collection {2, 3, 3, 9} is 4.25, which is not the "halfway point
 
 To see this, notice that the mean can be calculated in different ways.
 
-\begin{align*}
+$$\begin{align*}
 \mbox{mean} ~ &=~ 4.25 \\ \\
 &=~ \frac{2 + 3 + 3 + 9}{4} \\ \\
 &=~ 2 \cdot \frac{1}{4} ~~ + ~~ 3 \cdot \frac{1}{4} ~~ + ~~ 3 \cdot \frac{1}{4} ~~ + ~~ 9 \cdot \frac{1}{4} \\ \\
 &=~ 2 \cdot \frac{1}{4} ~~ + ~~ 3 \cdot \frac{2}{4} ~~ + ~~ 9 \cdot \frac{1}{4} \\ \\
 &=~ 2 \cdot 0.25 ~~ + ~~ 3 \cdot 0.5 ~~ + ~~ 9 \cdot 0.25
-\end{align*}
+\end{align*}$$
 
 The last expression is an example of a general fact: when we calculate the mean, each distinct value in the collection is *weighted* by the proportion of times it appears in the collection.
 
@@ -174,7 +178,7 @@ not_symmetric
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([2, 3, 3, 9])
 ```
@@ -193,7 +197,7 @@ np.mean(same_distribution)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 4.25
 ```
@@ -202,6 +206,15 @@ np.mean(same_distribution)
 
 The mean is a physical attribute of the histogram of the distribution. Here is the histogram of the distribution of `not_symmetric` or equivalently the distribution of `same_distribution`.
 
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/1/Properties_of_the_Mean_17_0.png)
+
+
+
 Imagine the histogram as a figure made out of cardboard attached to a wire that runs along the horizontal axis, and imagine the bars as weights attached at the values 2, 3, and 9. Suppose you try to balance this figure on a point on the wire. If the point is near 2, the figure will tip over to the right. If the point is near 9, the figure will tip over to the left. Somewhere in between is the point where the figure will balance; that point is the 4.25, the mean.
 
 **The mean is the center of gravity or balance point of the histogram.**
@@ -209,6 +222,15 @@ Imagine the histogram as a figure made out of cardboard attached to a wire that 
 To understand why that is, it helps to know some physics. The center of gravity is calculated exactly as we calculated the mean, by using the distinct values weighted by their proportions.
 
 Because the mean is a balance point, it is sometimes displayed as a *fulcrum* or triangle at the base of the histogram.
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/1/Properties_of_the_Mean_19_0.png)
+
+
 
 ### The Mean and the Median
 
@@ -228,6 +250,15 @@ symmetric = make_array(2, 3, 3, 4)
 
 
 
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/1/Properties_of_the_Mean_22_0.png)
+
+
+
+
+
 {:.input_area}
 ```python
 np.mean(symmetric)
@@ -237,7 +268,7 @@ np.mean(symmetric)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3.0
 ```
@@ -255,7 +286,7 @@ percentile(50, symmetric)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 3
 ```
@@ -268,23 +299,11 @@ What if the distribution is not symmetric? Let's compare `symmetric` and `not_sy
 
 
 
-{:.input_area}
-```python
-
-t2 = t2.with_column(
-        'not_symmetric', make_array(0.25, 0.5, 0, 0.25)
-)
-
-mean2 = sum(t2.column('Value')*t2.column('not_symmetric'))
-t2.hist(counts='Value', bins=np.arange(1.5, 9.6, 1))
-plots.scatter(mean1, -0.009, marker='^', color='darkblue', s=60)
-plots.scatter(mean2, -0.009, marker='^', color='gold', s=60)
-plots.ylim(-0.05, 0.5);
-```
 
 
+{:.output .output_png}
+![png](../../../images/chapters/14/1/Properties_of_the_Mean_26_0.png)
 
-![png](../../../images/chapters/14/1/Properties_of_the_Mean_22_0.png)
 
 
 The blue histogram represents the original `symmetric` distribution. The gold histogram of `not_symmetric` starts out the same as the blue at the left end, but its rightmost bar has slid over to the value 9. The brown part is where the two histograms overlap.
@@ -319,7 +338,9 @@ sf2015.select('Total Compensation').hist(bins = np.arange(10000, 700000, 25000))
 
 
 
-![png](../../../images/chapters/14/1/Properties_of_the_Mean_29_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/14/1/Properties_of_the_Mean_33_0.png)
+
 
 
 This histogram is skewed to the right; it has a right-hand tail. 
@@ -338,7 +359,7 @@ percentile(50, compensation)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 110305.79
 ```
@@ -356,7 +377,7 @@ np.mean(compensation)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 114725.98411824222
 ```

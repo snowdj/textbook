@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/09/5/finding-probabilities"
 interact_link: content/chapters/09/5/Finding_Probabilities.ipynb
+kernel_name: Python [Root]
 title: 'Finding Probabilities'
 prev_page:
   url: /chapters/09/4/Monty_Hall_Problem
@@ -11,6 +12,9 @@ next_page:
   title: 'Sampling and Empirical Distributions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Finding Probabilities
 Over the centuries, there has been considerable philosophical debate about what probabilities are. Some people think that probabilities are relative frequencies; others think they are long run relative frequencies; still others think that probabilities are a subjective measure of their own personal degree of uncertainty.
@@ -178,7 +182,7 @@ results
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -234,7 +238,9 @@ results.scatter('Rolls')
 
 
 
-![png](../../../images/chapters/09/5/Finding_Probabilities_14_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/09/5/Finding_Probabilities_15_0.png)
+
 
 
 In 50 rolls, you are almost certain to get at least one 6.
@@ -250,7 +256,7 @@ results.where('Rolls', are.equal_to(50))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

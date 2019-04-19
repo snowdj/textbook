@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/07/visualization"
 interact_link: content/chapters/07/Visualization.ipynb
+kernel_name: python3
 title: 'Visualization'
 prev_page:
   url: /chapters/06/4/Example_Gender_Ratio_in_the_US_Population
@@ -11,6 +12,9 @@ next_page:
   title: 'Categorical Distributions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Visualization
 
@@ -47,7 +51,7 @@ actors
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -111,7 +115,9 @@ actors.scatter('Number of Movies', 'Total Gross')
 
 
 
-![png](../../images/chapters/07/Visualization_7_0.png)
+{:.output .output_png}
+![png](../../images/chapters/07/Visualization_8_0.png)
+
 
 
 The plot contains 50 points, one point for each actor in the table. You can see that it slopes upwards, in general. The more movies an actor has been in, the more the total gross of all of those movies – in general.
@@ -133,7 +139,9 @@ actors.scatter('Number of Movies', 'Average per Movie')
 
 
 
-![png](../../images/chapters/07/Visualization_10_0.png)
+{:.output .output_png}
+![png](../../images/chapters/07/Visualization_11_0.png)
+
 
 
 This is a markedly different picture and shows a *negative* association. In general, the more movies an actor has been in, the *less* the average receipt per movie.
@@ -154,7 +162,9 @@ no_outlier.scatter('Number of Movies', 'Average per Movie')
 
 
 
-![png](../../images/chapters/07/Visualization_13_0.png)
+{:.output .output_png}
+![png](../../images/chapters/07/Visualization_14_0.png)
+
 
 
 The negative association is still clearly visible. Let's identify the actors corresponding to the points that lie on the right hand side of the plot where the number of movies is large:
@@ -170,7 +180,7 @@ actors.where('Number of Movies', are.above(60))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -213,7 +223,7 @@ actors.where('Number of Movies', are.below(10))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -264,7 +274,7 @@ movies_by_year
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -320,7 +330,9 @@ movies_by_year.plot('Year', 'Number of Movies')
 
 
 
-![png](../../images/chapters/07/Visualization_22_0.png)
+{:.output .output_png}
+![png](../../images/chapters/07/Visualization_23_0.png)
+
 
 
 The graph rises sharply and then has a gentle upwards trend though the numbers vary noticeably from year to year. The sharp rise in the early 1980's is due in part to studios returning to the forefront of movie production after some years of filmmaker driven movies in the 1970's. 
@@ -344,7 +356,9 @@ century_21.plot('Year', 'Number of Movies')
 
 
 
-![png](../../images/chapters/07/Visualization_25_0.png)
+{:.output .output_png}
+![png](../../images/chapters/07/Visualization_26_0.png)
+
 
 
 The global financial crisis of 2008 has a visible effect – in 2009 there is a sharp drop in the number of movies released.
@@ -360,7 +374,9 @@ century_21.plot('Year', 'Total Gross')
 
 
 
-![png](../../images/chapters/07/Visualization_27_0.png)
+{:.output .output_png}
+![png](../../images/chapters/07/Visualization_28_0.png)
+
 
 
 The total domestic gross receipt was higher in 2009 than in 2008, even though there was a financial crisis and a much smaller number of movies were released.
@@ -380,7 +396,7 @@ century_21.where('Year', are.equal_to(2009))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

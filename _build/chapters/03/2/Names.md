@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/03/2/names"
 interact_link: content/chapters/03/2/Names.ipynb
+kernel_name: python3
 title: 'Names'
 prev_page:
   url: /chapters/03/1/Expressions
@@ -29,7 +30,7 @@ a + b
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 30
 ```
@@ -51,7 +52,7 @@ half
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.5
 ```
@@ -72,7 +73,7 @@ half
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.5
 ```
@@ -98,7 +99,7 @@ sales_tax
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.475
 ```

@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/12/comparing-two-samples"
 interact_link: content/chapters/12/Comparing_Two_Samples.ipynb
+kernel_name: Python [Root]
 title: 'Comparing Two Samples'
 prev_page:
   url: /chapters/11/3/Decisions_and_Uncertainty
@@ -11,6 +12,9 @@ next_page:
   title: 'A/B Testing'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Comparing Two Samples
 We have seen several examples of assessing whether a single sample looks like random draws from a specified chance model. 

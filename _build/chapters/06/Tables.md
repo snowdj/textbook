@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/06/tables"
 interact_link: content/chapters/06/Tables.ipynb
+kernel_name: python3
 title: 'Tables'
 prev_page:
   url: /chapters/05/3/More_on_Arrays
@@ -11,6 +12,9 @@ next_page:
   title: 'Sorting Rows'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # Tables
 
@@ -41,7 +45,7 @@ Table()
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -70,7 +74,7 @@ Table().with_columns('Number of petals', make_array(8, 34, 5))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -109,7 +113,7 @@ Table().with_columns(
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -152,7 +156,7 @@ flowers.with_columns(
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -188,7 +192,7 @@ flowers
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -229,7 +233,7 @@ minard
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -284,7 +288,7 @@ minard.num_columns
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 5
 ```
@@ -302,7 +306,7 @@ minard.num_rows
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 8
 ```
@@ -323,7 +327,7 @@ minard.labels
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 ('Longitude', 'Latitude', 'City', 'Direction', 'Survivors')
 ```
@@ -343,7 +347,7 @@ minard.relabeled('City', 'City Name')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -394,7 +398,7 @@ minard
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -446,7 +450,7 @@ minard
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -498,7 +502,7 @@ minard.column('Survivors')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([145000, 140000, 127100, 100000,  55000,  24000,  20000,  12000])
 ```
@@ -518,7 +522,7 @@ minard.column(4)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([145000, 140000, 127100, 100000,  55000,  24000,  20000,  12000])
 ```
@@ -538,7 +542,7 @@ minard.column(4).item(0)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 145000
 ```
@@ -556,7 +560,7 @@ minard.column(4).item(5)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 24000
 ```
@@ -581,7 +585,7 @@ minard
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -632,7 +636,7 @@ minard.set_format('Percent Surviving', PercentFormatter)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -684,7 +688,7 @@ minard.select('Longitude', 'Latitude')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -735,7 +739,7 @@ minard.select(0, 1)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -786,7 +790,7 @@ minard.select('Survivors')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -837,7 +841,7 @@ minard.column('Survivors')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([145000, 140000, 127100, 100000,  55000,  24000,  20000,  12000])
 ```
@@ -857,7 +861,7 @@ minard.drop('Longitude', 'Latitude', 'Direction')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -908,7 +912,7 @@ minard
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

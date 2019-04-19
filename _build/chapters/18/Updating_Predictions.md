@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/18/updating-predictions"
 interact_link: content/chapters/18/Updating_Predictions.ipynb
+kernel_name: python3
 title: 'Updating Predictions'
 prev_page:
   url: /chapters/17/6/Multiple_Regression
@@ -11,6 +12,9 @@ next_page:
   title: 'A "More Likely Than Not" Binary Classifier'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Updating Predictions
 We know how to use training data to classify a point into one of two categories. Our classification is just a prediction of the class, based on the most common class among the training points that are nearest our new point. 

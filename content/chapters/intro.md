@@ -12,11 +12,8 @@ This is the textbook for the [Foundations of Data Science class at UC Berkeley][
 
 [View this textbook online on GitHub Pages.][ghpages]
 
-Old versions of this textbook:
-	[Fall 2017](http://inferentialthinking.com/v/fa17)
-
 [data8]: http://data8.org/
 [ghpages]: https://inferentialthinking.com
 
 The contents of this book are licensed for free consumption under the following license:  
-[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).

@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/03/2/1/growth"
 interact_link: content/chapters/03/2/1/Growth.ipynb
+kernel_name: python3
 title: 'Example: Growth Rates'
 prev_page:
   url: /chapters/03/2/Names
@@ -29,7 +30,7 @@ changed = 2814000
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.01735357917570499
 ```
@@ -49,7 +50,7 @@ It is also typical to subtract one from the ratio of the two measurements, which
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.017353579175704903
 ```
@@ -71,7 +72,7 @@ changed = 2814
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.017353579175704903
 ```
@@ -93,7 +94,7 @@ changed = 3.38
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.4261603375527425
 ```
@@ -115,7 +116,7 @@ changed = 314.1
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.09214186369958277
 ```
@@ -137,7 +138,7 @@ changed = 11.9
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 -0.2222222222222222
 ```
@@ -157,7 +158,7 @@ An annual growth rate is a growth rate of some quantity over a single year. An a
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.410598760621121
 ```
@@ -179,7 +180,7 @@ ten_year_growth_rate
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.410598760621121
 ```
@@ -202,7 +203,7 @@ t = 10
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.03613617208346853
 ```

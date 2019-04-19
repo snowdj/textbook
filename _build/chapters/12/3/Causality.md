@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/12/3/causality"
 interact_link: content/chapters/12/3/Causality.ipynb
+kernel_name: python3
 title: 'Causality'
 prev_page:
   url: /chapters/12/2/Deflategate
@@ -11,6 +12,9 @@ next_page:
   title: 'Estimation'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Causality
 
@@ -37,7 +41,7 @@ bta.show()
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -149,26 +153,26 @@ Remember that counting is the same as adding zeros and ones. The sum of 1's in t
 
 {:.input_area}
 ```python
-bta.group('Group', np.mean)
+bta.group('Group', np.average)
 ```
 
 
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
-            <th>Group</th> <th>Result mean</th>
+            <th>Group</th> <th>Result average</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Control  </td> <td>0.125      </td>
+            <td>Control  </td> <td>0.125         </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0.6        </td>
+            <td>Treatment</td> <td>0.6           </td>
         </tr>
     </tbody>
 </table>
@@ -180,7 +184,7 @@ In the treatment group, 60% of the patients had pain relief, compared to only 12
 
 So the indications are that botulinum toxin A did better than the saline. But the conclusion isn't yet a slam-dunk. The patients were assigned at random into the two groups, so perhaps the difference could just be due to chance?
 
-To understand what this means, we have to consider the possibility that among the 31 people in the study, some were simply better able to recover than others, even without any help from the treatment. What if an unusually large proportion of them got assigned to the treatment group, just by chance? Then even if the treatment did nothing more than the saline in the control group, the results of the treatment group might look better than those of the control group. 
+To understand what this means, we have to consider the possibility that among the 31 patients in the study, some were simply better able to recover than others, even without any help from the treatment. What if an unusually large proportion of such patients got assigned to the treatment group, just by chance? Then even if the treatment did nothing more than the saline in the control group, the results of the treatment group might look better than those of the control group. 
 
 To account for this possibility, let's start by carefully setting up the chance model.
 
@@ -211,7 +215,7 @@ observed_outcomes.show()
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -348,7 +352,7 @@ bta.group('Group', np.average)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -381,7 +385,44 @@ observed_distance
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
+```
+0.475
+```
+
+
+
+As we have done before, we will define a function that takes the following arguments:
+
+- the name of the table of data
+- the column label of the numerical variable
+- the column label of the group labels
+
+and returns the absolute difference between the two group proportions.
+
+
+
+{:.input_area}
+```python
+def distance(table, label, group_label):
+    reduced = table.select(label, group_label)
+    proportions = reduced.group(group_label, np.average).column(1)
+    return abs(proportions.item(1) - proportions.item(0))
+```
+
+
+
+
+{:.input_area}
+```python
+distance(bta, 'Result', 'Group')
+```
+
+
+
+
+
+{:.output .output_data_text}
 ```
 0.475
 ```
@@ -392,13 +433,13 @@ observed_distance
 We can simulate results under the null hypothesis, to see how our test statistic should come out if the null hypothesis is true.
 
 #### Generating One Value of the Statistic
-The simulation follows exactly the same process we used in the previous section. We start by randomly permuting the `results` column and assigning "control" and "treatment" labels to the permuted results. 
+The simulation follows exactly the same process we used in the previous section. We start by randomly permuting the all group labels and then attaching the shuffled labels to the 0/1 results.
 
 
 
 {:.input_area}
 ```python
-shuffled_results = bta.sample(with_replacement=False).column(1)
+shuffled_labels = bta.sample(with_replacement=False).column(0)
 ```
 
 
@@ -406,218 +447,186 @@ shuffled_results = bta.sample(with_replacement=False).column(1)
 
 {:.input_area}
 ```python
-bta_with_shuffled_results = bta.with_column('Shuffled Results', shuffled_results)
-bta_with_shuffled_results.show()
+bta_with_shuffled_labels = bta.with_column('Shuffled Label', shuffled_labels)
+bta_with_shuffled_labels.show()
 ```
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
-            <th>Group</th> <th>Result</th> <th>Shuffled Results</th>
+            <th>Group</th> <th>Result</th> <th>Shuffled Label</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Control  </td> <td>1     </td> <td>1               </td>
+            <td>Control  </td> <td>1     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>1     </td> <td>1               </td>
+            <td>Control  </td> <td>1     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>1               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>1               </td>
+            <td>Control  </td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>1               </td>
+            <td>Control  </td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Control  </td> <td>0     </td> <td>0               </td>
+            <td>Control  </td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>0               </td>
+            <td>Treatment</td> <td>1     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>0               </td>
+            <td>Treatment</td> <td>1     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>0               </td>
+            <td>Treatment</td> <td>1     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>1               </td>
+            <td>Treatment</td> <td>1     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>1               </td>
+            <td>Treatment</td> <td>1     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>0               </td>
+            <td>Treatment</td> <td>1     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>1               </td>
+            <td>Treatment</td> <td>1     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>0               </td>
+            <td>Treatment</td> <td>1     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>1     </td> <td>1               </td>
+            <td>Treatment</td> <td>1     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0     </td> <td>0               </td>
+            <td>Treatment</td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0     </td> <td>1               </td>
+            <td>Treatment</td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0     </td> <td>0               </td>
+            <td>Treatment</td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0     </td> <td>0               </td>
+            <td>Treatment</td> <td>0     </td> <td>Treatment     </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0     </td> <td>0               </td>
+            <td>Treatment</td> <td>0     </td> <td>Control       </td>
         </tr>
         <tr>
-            <td>Treatment</td> <td>0     </td> <td>1               </td>
+            <td>Treatment</td> <td>0     </td> <td>Control       </td>
         </tr>
     </tbody>
 </table>
 </div>
 
 
-We then get the group means of the shuffled results:
+We can now find the distance between the two proportions after the group labels have been shuffled.
 
 
 
 {:.input_area}
 ```python
-bta_with_shuffled_results.group('Group', np.average)
+distance(bta_with_shuffled_labels, 'Result', 'Shuffled Label')
 ```
 
 
 
 
 
-<div markdown="0">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Group</th> <th>Result average</th> <th>Shuffled Results average</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Control  </td> <td>0.125         </td> <td>0.3125                  </td>
-        </tr>
-        <tr>
-            <td>Treatment</td> <td>0.6           </td> <td>0.4                     </td>
-        </tr>
-    </tbody>
-</table>
-</div>
+{:.output .output_data_text}
+```
+0.041666666666666685
+```
 
 
 
-The group proportions in the "shuffled" column look quite different from those in the study's results. 
-
-We can use the simulated proportions to calculate the simulated value of the test statistic. By doing this repeatedly, we will get a sense of how the statistic varies under the null hypothesis.
+This is quite different from the distance between the two original proportions.
 
 
 
 {:.input_area}
 ```python
-proportions = bta_with_shuffled_results.group('Group', np.average).column(2)
-simulated_distance = abs(proportions.item(0) - proportions.item(1))
-simulated_distance
+distance(bta_with_shuffled_labels, 'Result', 'Group')
 ```
 
 
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
-0.08750000000000002
+0.475
 ```
 
 
 
 ### Permutation Test
-You can see that we are doing exactly what we did in our previous examples of the permutation test. Here is the function we defined earlier to generate the simulated differences under the null hypothesis. It simply collects the code above and puts it in the body of a `for` loop.
+If we shuffled the labels again, how different would the new distance be? To answer this, we will define a function that simulates one simulated value of the distance under the hypothesis of random draws from the same underlying distribution. And then we will collect 20,000 such simulated values in an array.
+
+You can see that we are doing exactly what we did in our previous examples of the permutation test. 
 
 
 
 {:.input_area}
 ```python
-def permuted_sample_average_difference(table, label, group_label, repetitions):
-    
-    tbl = table.select(group_label, label)
-    
-    differences = make_array()
-    for i in np.arange(repetitions):
-        shuffled = tbl.sample(with_replacement = False).column(1)
-        original_and_shuffled = tbl.with_column('Shuffled Data', shuffled)
-
-        shuffled_means = original_and_shuffled.group(group_label, np.average).column(2)
-        simulated_difference = shuffled_means.item(1) - shuffled_means.item(0)
-    
-        differences = np.append(differences, simulated_difference)
-    
-    return differences   
+def one_simulated_distance(table, label, group_label):
+    shuffled_labels = table.sample(with_replacement = False
+                                                    ).column(group_label)
+    shuffled_table = table.select(label).with_column(
+        'Shuffled Label', shuffled_labels)
+    return distance(shuffled_table, label, 'Shuffled Label') 
 ```
 
 
-We will call this function to generate an array of differences between proportions in randomly selected "control" and "treatment" groups.
-
 
 
 {:.input_area}
 ```python
+distances = make_array()
+
 repetitions = 20000
-differences = permuted_sample_average_difference(bta, 'Result', 'Group', repetitions)
-```
-
-
-Our statistic is the distance between the two proportions, that is, the absolute value of the difference.
-
-
-
-{:.input_area}
-```python
-distances = np.abs(differences)
+for i in np.arange(repetitions):
+    new_distance = one_simulated_distance(bta, 'Result', 'Group')
+    distances = np.append(distances, new_distance)
 ```
 
 
@@ -638,38 +647,40 @@ empirical_P
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
-0.00955
+0.0085
 ```
 
 
 
 This is a small P-value. The observed statistic, shown as the red dot below, is in the tail of the empirical histogram of the test statistic generated under the null hypothesis.
 
-The result is statistically significant. The test favors the alternative hypothesis more than the null. The evidence supports the hypothesis that the treatment is doing something.
+The result is statistically significant. The test favors the alternative hypothesis over the null. The evidence supports the hypothesis that the treatment is doing something.
 
 
 
 {:.input_area}
 ```python
-Table().with_column('Distance under Null Hypothesis', distances).hist(bins = np.arange(0, 0.7, 0.1))
-plots.scatter(observed_distance, 0, color='red', s=30)
+Table().with_column('Distance', distances).hist(bins = np.arange(0, 0.7, 0.1))
+plots.scatter(observed_distance, 0, color='red', s=40)
 plots.title('Prediction Under the Null Hypothesis')
 print('Observed Distance', observed_distance)
 print('Empirical P-value:', round(empirical_P, 4) *100, '%')
 ```
 
 
-{:.output_stream}
+{:.output .output_stream}
 ```
 Observed Distance 0.475
-Empirical P-value: 0.95 %
+Empirical P-value: 0.8500000000000001 %
 
 ```
 
 
-![png](../../../images/chapters/12/3/Causality_29_1.png)
+{:.output .output_png}
+![png](../../../images/chapters/12/3/Causality_30_1.png)
+
 
 
 The study reports a P-value of 0.009, or 0.9%, which is not far from our empirical value. 
@@ -681,7 +692,7 @@ If the treatment had not been randomly assigned, our test would still point towa
 
 ### A Meta-Analysis
 
-While the RCT does provide evidence that the botulinum toxin A treatment helped patients, a study of 31 patients isn't enough to establish the effectiveness of a medical treatment. This is not just because of the small sample size.  Our results in this section are valid for the 31 patients in the study, but we are really interested in the population of *all possible patients*.  If the 31 patients were a random sample from *that* larger population, our confidence interval would be valid for that population.  But they were not a random sample.
+While the RCT does provide evidence that the botulinum toxin A treatment helped patients, a study of 31 patients isn't enough to establish the effectiveness of a medical treatment. This is not just because of the small sample size.  Our results in this section are valid for the 31 patients in the study, but we are really interested in the population of *all possible patients*.  If the 31 patients were a random sample from that larger population, our confidence interval would be valid for that population.  But they were not a random sample.
 
 In 2011, a group of researchers performed a [meta-analysis](https://www.ncbi.nlm.nih.gov/pubmed/21249702) of the studies on the treatment. That is, they identified all the available studies of such treatments for low-back pain and summarized the collated results. 
 

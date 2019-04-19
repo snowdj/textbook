@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/09/3/simulation"
 interact_link: content/chapters/09/3/Simulation.ipynb
+kernel_name: Python [Root]
 title: 'Simulation'
 prev_page:
   url: /chapters/09/2/Iteration
@@ -11,6 +12,9 @@ next_page:
   title: 'The Monty Hall Problem'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Simulation
 Simulation is the process of using a computer to mimic a physical experiment. In this class, those experiments will almost invariably involve chance. 
@@ -77,7 +81,7 @@ ten_tosses
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array(['Tails', 'Heads', 'Heads', 'Tails', 'Tails', 'Heads', 'Tails',
        'Tails', 'Heads', 'Tails'], dtype='<U5')
@@ -98,7 +102,7 @@ np.count_nonzero(ten_tosses == 'Heads')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 4
 ```
@@ -120,7 +124,7 @@ num_heads
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 45
 ```
@@ -174,7 +178,7 @@ len(heads)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 10000
 ```
@@ -205,7 +209,7 @@ simulation_results
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -259,7 +263,9 @@ simulation_results.hist('Number of Heads', bins = np.arange(30.5, 69.6, 1))
 
 
 
-![png](../../../images/chapters/09/3/Simulation_16_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/09/3/Simulation_17_0.png)
+
 
 
 Each bins has width 1 and is centered at each value of the number of heads.
@@ -300,7 +306,7 @@ heads
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([52., 45., 48., ..., 48., 44., 51.])
 ```
@@ -326,7 +332,7 @@ sum(np.random.choice(die, 2))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 8
 ```
@@ -365,7 +371,9 @@ results.hist('Sum of Two Rolls', bins = np.arange(1.5, 12.6, 1))
 
 
 
-![png](../../../images/chapters/09/3/Simulation_26_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/09/3/Simulation_27_0.png)
+
 
 
 Seven is the most common value, with the frequencies falling off symmetrically on either side.

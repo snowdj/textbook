@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/16/inference-for-regression"
 interact_link: content/chapters/16/Inference_for_Regression.ipynb
+kernel_name: python3
 title: 'Inference for Regression'
 prev_page:
   url: /chapters/15/6/Numerical_Diagnostics
@@ -11,6 +12,9 @@ next_page:
   title: 'A Regression Model'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Inference for Regression
 

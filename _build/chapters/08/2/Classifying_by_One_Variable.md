@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/08/2/classifying-by-one-variable"
 interact_link: content/chapters/08/2/Classifying_by_One_Variable.ipynb
+kernel_name: python3
 title: 'Classifying by One Variable'
 prev_page:
   url: /chapters/08/1/Applying_a_Function_to_a_Column
@@ -11,6 +12,9 @@ next_page:
   title: 'Cross-Classifying'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Classifying by One Variable
 
@@ -38,7 +42,7 @@ cones
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -78,7 +82,7 @@ cones.group('Flavor')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -120,7 +124,7 @@ cones.group('Flavor', sum)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -159,7 +163,7 @@ cones.where('Flavor', are.equal_to('chocolate')).column('Price')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([4.75, 6.55, 5.25])
 ```
@@ -177,7 +181,7 @@ sum(cones.where('Flavor', are.equal_to('chocolate')).column('Price'))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 16.55
 ```
@@ -215,7 +219,7 @@ price_totals
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -248,7 +252,7 @@ cones.group('Flavor', max)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -284,7 +288,7 @@ price_maxes
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -320,7 +324,7 @@ lengths
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -356,7 +360,7 @@ nba
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -417,7 +421,7 @@ teams_and_money.group('TEAM', sum)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -477,7 +481,7 @@ nba.group('POSITION')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -522,7 +526,7 @@ positions_and_money.group('POSITION', np.mean)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -566,7 +570,7 @@ nba.group('POSITION', np.mean)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

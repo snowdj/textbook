@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/14/3/sd-and-the-normal-curve"
 interact_link: content/chapters/14/3/SD_and_the_Normal_Curve.ipynb
+kernel_name: python3
 title: 'The SD and the Normal Curve'
 prev_page:
   url: /chapters/14/2/Variability
@@ -11,6 +12,9 @@ next_page:
   title: 'The Central Limit Theorem'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### The SD and the Normal Curve
 
@@ -42,7 +46,7 @@ mean_height
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 64.0
 ```
@@ -61,7 +65,7 @@ sd_height
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 2.5
 ```
@@ -79,7 +83,9 @@ plots.xticks(positions);
 
 
 
-![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_5_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_6_0.png)
+
 
 
 The last two lines of code in the cell above change the labeling of the horizontal axis. Now, the labels correspond to "average $\pm$ $z$ SDs" for $z = 0, \pm 1, \pm 2$, and $\pm 3$. Because of the shape of the distribution, the "center" has an unambiguous meaning and is clearly visible at 64.
@@ -103,6 +109,15 @@ The standard normal curve has an impressive equation. But for now, it is best to
 $$
 \phi(z) = {\frac{1}{\sqrt{2 \pi}}} e^{-\frac{1}{2}z^2}, ~~ -\infty < z < \infty
 $$
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_11_0.png)
+
+
 
 As always when you examine a new histogram, start by looking at the horizontal axis. On the horizontal axis of the standard normal curve, the values are standard units. 
 
@@ -136,6 +151,15 @@ The fundamental function for finding areas under the normal curve is `stats.norm
 
 Let us use this function to find the area to the left of $z=1$ under the standard normal curve. 
 
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_16_0.png)
+
+
+
 The numerical value of the shaded area can be found by calling `stats.norm.cdf`.
 
 
@@ -149,7 +173,7 @@ stats.norm.cdf(1)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.8413447460685429
 ```
@@ -162,6 +186,15 @@ The area to the right of $z=1$ is about 100% - 84% = 16%.
 
 
 
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_20_0.png)
+
+
+
+
+
 {:.input_area}
 ```python
 1 - stats.norm.cdf(1)
@@ -171,7 +204,7 @@ The area to the right of $z=1$ is about 100% - 84% = 16%.
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.15865525393145707
 ```
@@ -179,6 +212,15 @@ The area to the right of $z=1$ is about 100% - 84% = 16%.
 
 
 The area between $z=-1$ and $z=1$ can be computed in several different ways.  It is the gold area under the curve below. 
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_23_0.png)
+
+
 
 For example, we could calculate the area as "100% - two equal tails", which works out to roughly 100% - 2x16% = 68%.
 
@@ -195,7 +237,7 @@ stats.norm.cdf(1) - stats.norm.cdf(-1)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.6826894921370859
 ```
@@ -203,6 +245,15 @@ stats.norm.cdf(1) - stats.norm.cdf(-1)
 
 
 By a similar calculation, we see that the area between $-2$ and 2 is about 95%.
+
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/3/SD_and_the_Normal_Curve_27_0.png)
+
+
 
 
 
@@ -215,7 +266,7 @@ stats.norm.cdf(2) - stats.norm.cdf(-2)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.9544997361036416
 ```

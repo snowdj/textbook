@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/10/1/empirical-distributions"
 interact_link: content/chapters/10/1/Empirical_Distributions.ipynb
+kernel_name: python3
 title: 'Empirical Distributions'
 prev_page:
   url: /chapters/10/Sampling_and_Empirical_Distributions
@@ -11,6 +12,9 @@ next_page:
   title: 'Sampling from a Population'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Empirical Distributions
 
@@ -32,7 +36,7 @@ die
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -78,7 +82,9 @@ die.hist(bins = die_bins)
 
 
 
-![png](../../../images/chapters/10/1/Empirical_Distributions_3_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/1/Empirical_Distributions_4_0.png)
+
 
 
 Variables whose successive values are separated by the same fixed amount, such as the values on rolls of a die (successive values separated by 1), fall into a class of variables that are called *discrete*. The histogram above is called a *discrete* histogram. Its bins are specified by the array `die_bins` and ensure that each bar is centered over the corresponding integer value. 
@@ -94,7 +100,7 @@ The distribution above consists of the theoretical probability of each face. It 
 
 Let us get some data by simulating rolls of a die. This can be done by sampling at random with replacement from the integers 1 through 6. We have used `np.random.choice` for such simulations before. But now we will introduce a Table method for doing this. This will make it possible for us to use our familiar Table methods for visualization.
 
-TThe Table method is called `sample`. It draws at random with replacement from the rows of a table. Its argument is the sample size, and it returns a table consisting of the rows that were selected. An optional argument `with_replacement=False` specifies that the sample should be drawn without replacement, but that does not apply to rolling a die.
+The Table method is called `sample`. It draws at random with replacement from the rows of a table. Its argument is the sample size, and it returns a table consisting of the rows that were selected. An optional argument `with_replacement=False` specifies that the sample should be drawn without replacement, but that does not apply to rolling a die.
 
 Here are the results of 10 rolls of a die.
 
@@ -109,7 +115,7 @@ die.sample(10)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -118,13 +124,10 @@ die.sample(10)
     </thead>
     <tbody>
         <tr>
-            <td>6   </td>
+            <td>1   </td>
         </tr>
         <tr>
-            <td>3   </td>
-        </tr>
-        <tr>
-            <td>5   </td>
+            <td>2   </td>
         </tr>
         <tr>
             <td>3   </td>
@@ -133,19 +136,22 @@ die.sample(10)
             <td>4   </td>
         </tr>
         <tr>
-            <td>3   </td>
+            <td>4   </td>
         </tr>
         <tr>
-            <td>5   </td>
+            <td>1   </td>
+        </tr>
+        <tr>
+            <td>1   </td>
+        </tr>
+        <tr>
+            <td>2   </td>
         </tr>
         <tr>
             <td>6   </td>
         </tr>
         <tr>
-            <td>5   </td>
-        </tr>
-        <tr>
-            <td>4   </td>
+            <td>2   </td>
         </tr>
     </tbody>
 </table>
@@ -153,7 +159,7 @@ die.sample(10)
 
 
 
-We can use the same method to simulate as many rolls as we like, and then draw empirical histograms of the results. Because we are going to do this repeatedly, we define a function `empirical_hist_die` that takes as its argument the sample size; the function rolls the die as many times as its argument and then draws a histogram.
+We can use the same method to simulate as many rolls as we like, and then draw empirical histograms of the results. Because we are going to do this repeatedly, we define a function `empirical_hist_die` that takes the sample size as its argument, rolls a die as many times as its argument, and then draws a histogram of the observed results.
 
 
 
@@ -177,7 +183,9 @@ empirical_hist_die(10)
 
 
 
-![png](../../../images/chapters/10/1/Empirical_Distributions_10_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/1/Empirical_Distributions_11_0.png)
+
 
 
 When the sample size increases, the empirical histogram begins to look more like the histogram of theoretical probabilities.
@@ -191,7 +199,9 @@ empirical_hist_die(100)
 
 
 
-![png](../../../images/chapters/10/1/Empirical_Distributions_12_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/1/Empirical_Distributions_13_0.png)
+
 
 
 
@@ -203,7 +213,9 @@ empirical_hist_die(1000)
 
 
 
-![png](../../../images/chapters/10/1/Empirical_Distributions_13_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/1/Empirical_Distributions_14_0.png)
+
 
 
 As we increase the number of rolls in the simulation, the area of each bar gets closer to 16.67%, which is the area of each bar in the probability histogram.

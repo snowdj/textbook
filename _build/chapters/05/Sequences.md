@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/05/sequences"
 interact_link: content/chapters/05/Sequences.ipynb
+kernel_name: python3
 title: 'Sequences'
 prev_page:
   url: /chapters/04/3/Comparison
@@ -11,6 +12,9 @@ next_page:
   title: 'Arrays'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # Sequences
 
@@ -32,7 +36,7 @@ highs
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([ 13.6  ,  14.387,  14.585,  15.164])
 ```
@@ -52,7 +56,7 @@ sum(highs)/len(highs)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 14.434000000000001
 ```

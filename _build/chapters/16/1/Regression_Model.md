@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/16/1/regression-model"
 interact_link: content/chapters/16/1/Regression_Model.ipynb
+kernel_name: python3
 title: 'A Regression Model'
 prev_page:
   url: /chapters/16/Inference_for_Regression
@@ -11,6 +12,12 @@ next_page:
   title: 'Inference for the True Slope'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
+
+
+
 
 ### A Regression Model
 
@@ -35,6 +42,9 @@ Run the simulation a few times, with different values for the slope and intercep
 
 
 
+
+
+
 {:.input_area}
 ```python
 # The true line,
@@ -47,7 +57,9 @@ draw_and_compare(4, -5, 10)
 
 
 
-![png](../../../images/chapters/16/1/Regression_Model_2_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/16/1/Regression_Model_5_0.png)
+
 
 
 In reality, of course, we will never see the true line. What the simulation shows that if the regression model looks plausible, and if we have a large sample, then the regression line is a good approximation to the true line.

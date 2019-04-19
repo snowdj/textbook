@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/06/3/example-trends-in-the-population-of-the-united-states"
 interact_link: content/chapters/06/3/Example_Trends_in_the_Population_of_the_United_States.ipynb
+kernel_name: python3
 title: 'Example: Population Trends'
 prev_page:
   url: /chapters/06/2/Selecting_Rows
@@ -11,6 +12,9 @@ next_page:
   title: 'Example: Trends in Gender'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # Example: Population Trends
 
@@ -34,7 +38,7 @@ full_census_table
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -97,7 +101,7 @@ partial_census_table
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -156,7 +160,7 @@ us_pop
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -214,7 +218,7 @@ us_pop.column('2014') - us_pop.column('2010')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([  -1555,   -8112, -131198, ...,    6443,   12950, 4693244])
 ```
@@ -239,7 +243,7 @@ census.set_format('Percent Change', PercentFormatter)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -297,7 +301,7 @@ census.sort('Change', descending=True)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

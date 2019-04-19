@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/08/4/joining-tables-by-columns"
 interact_link: content/chapters/08/4/Joining_Tables_by_Columns.ipynb
+kernel_name: python3
 title: 'Joining Tables by Columns'
 prev_page:
   url: /chapters/08/3/Cross-Classifying_by_More_than_One_Variable
@@ -11,6 +12,9 @@ next_page:
   title: 'Bike Sharing in the Bay Area'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Joining Tables by Columns
 Often, data about the same individuals is maintained in more than one table. For example, one university office might have data about each student's time to completion of degree, while another has data about the student's tuition and financial aid.
@@ -36,7 +40,7 @@ cones
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -80,7 +84,7 @@ ratings
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -119,7 +123,7 @@ rated
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -167,7 +171,7 @@ rated.with_column('$/Star', rated.column('Price') / rated.column('Stars')).sort(
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -211,7 +215,7 @@ ratings.join('Kind', cones, 'Flavor')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -257,7 +261,7 @@ reviews
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -295,7 +299,7 @@ average_review
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -328,7 +332,7 @@ cones.join('Flavor', average_review, 'Flavor')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/04/3/comparison"
 interact_link: content/chapters/04/3/Comparison.ipynb
+kernel_name: python3
 title: 'Comparisons'
 prev_page:
   url: /chapters/04/2/1/String_Methods
@@ -27,7 +28,7 @@ Boolean values most often arise from comparison operators. Python includes a var
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 True
 ```
@@ -58,7 +59,7 @@ An expression can contain multiple comparisons, and they all must hold in order 
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 True
 ```
@@ -80,7 +81,7 @@ min(x, y) <= (x+y)/2 <= max(x, y)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 True
 ```
@@ -100,7 +101,7 @@ Strings can also be compared, and their order is alphabetical. A shorter string 
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 True
 ```

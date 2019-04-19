@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/14/6/choosing-a-sample-size"
 interact_link: content/chapters/14/6/Choosing_a_Sample_Size.ipynb
+kernel_name: Python [Root]
 title: 'Choosing a Sample Size'
 prev_page:
   url: /chapters/14/5/Variability_of_the_Sample_Mean
@@ -11,6 +12,9 @@ next_page:
   title: 'Prediction'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Choosing a Sample Size
 Candidate A is contesting an election. A polling organization wants to estimate the proportion of voters who will vote for her. Let's suppose that they plan to take a simple random sample of voters, though in reality their method of sampling would be more complex. How can they decide how large their sample should be, to get a desired level of accuracy?
@@ -53,6 +57,15 @@ If we knew the SD of the population, we'd be done. We could calculate the square
 
 So are we stuck? No, because we can *bound* the SD of the population. Here are histograms of two such distributions, one for an equal proportion of 1's and 0's, and one with 90% 1's and 10% 0's. Which one has the bigger SD? 
 
+
+
+
+
+{:.output .output_png}
+![png](../../../images/chapters/14/6/Choosing_a_Sample_Size_4_0.png)
+
+
+
 Remember that the possible values in the population are only 0 and 1.
 
 The blue histogram (50% 1's and 50% 0's) has more spread than the gold. The mean is 0.5. Half the deviations from mean are equal to 0.5 and the other half equal to -0.5, so the SD is 0.5.
@@ -83,7 +96,7 @@ zero_one_sds
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -137,7 +150,9 @@ zero_one_sds.scatter("Population Proportion of 1's")
 
 
 
-![png](../../../images/chapters/14/6/Choosing_a_Sample_Size_6_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/14/6/Choosing_a_Sample_Size_8_0.png)
+
 
 
 **Summary:** The SD of a population of 1's and 0's is at most 0.5. That's the value of the SD when 50% of the population is coded 1 and the other 50% are coded 0.

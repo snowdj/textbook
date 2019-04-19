@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/08/3/cross-classifying-by-more-than-one-variable"
 interact_link: content/chapters/08/3/Cross-Classifying_by_More_than_One_Variable.ipynb
+kernel_name: python3
 title: 'Cross-Classifying'
 prev_page:
   url: /chapters/08/2/Classifying_by_One_Variable
@@ -11,6 +12,9 @@ next_page:
   title: 'Joining Tables by Columns'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Cross-Classifying by More than One Variable
 
@@ -38,7 +42,7 @@ more_cones
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -83,7 +87,7 @@ more_cones.group('Flavor')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -121,7 +125,7 @@ more_cones.group(['Flavor', 'Color'])
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -161,7 +165,7 @@ more_cones.group(['Flavor', 'Color'], sum)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -205,7 +209,7 @@ more_cones.group(['Flavor', 'Color'])
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -244,7 +248,7 @@ more_cones.pivot('Flavor', 'Color')
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -290,7 +294,7 @@ more_cones.pivot('Flavor', 'Color', values='Price', collect=sum)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -326,7 +330,7 @@ more_cones.group(['Flavor', 'Color'], sum)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -372,7 +376,7 @@ ca_2014
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -433,7 +437,7 @@ educ_inc
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -493,7 +497,7 @@ educ_totals
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -546,7 +550,7 @@ educ_distribution
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -586,7 +590,7 @@ totals
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -644,7 +648,7 @@ distributions
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -695,5 +699,7 @@ distributions.select(0, 1, 4).barh(0)
 
 
 
-![png](../../../images/chapters/08/3/Cross-Classifying_by_More_than_One_Variable_36_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/08/3/Cross-Classifying_by_More_than_One_Variable_37_0.png)
+
 

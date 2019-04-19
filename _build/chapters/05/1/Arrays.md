@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/05/1/arrays"
 interact_link: content/chapters/05/1/Arrays.ipynb
+kernel_name: python3
 title: 'Arrays'
 prev_page:
   url: /chapters/05/Sequences
@@ -11,6 +12,9 @@ next_page:
   title: 'Ranges'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 # Arrays
 
@@ -30,7 +34,7 @@ english_parts_of_speech
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array(['noun', 'pronoun', 'verb', 'adverb', 'adjective', 'conjunction',
        'preposition', 'interjection'], dtype='<U12')
@@ -56,7 +60,7 @@ highs
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([13.6  , 14.387, 14.585, 15.164])
 ```
@@ -76,7 +80,7 @@ Arrays can be used in arithmetic expressions to compute over their contents. Whe
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([56.48  , 57.8966, 58.253 , 59.2952])
 ```
@@ -98,7 +102,7 @@ highs.size
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 4
 ```
@@ -116,7 +120,7 @@ highs.sum()
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 57.736000000000004
 ```
@@ -134,7 +138,7 @@ highs.mean()
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 14.434000000000001
 ```
@@ -165,7 +169,7 @@ np.diff(highs)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([0.787, 0.198, 0.579])
 ```

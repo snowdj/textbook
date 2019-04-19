@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/10/sampling-and-empirical-distributions"
 interact_link: content/chapters/10/Sampling_and_Empirical_Distributions.ipynb
+kernel_name: Python [Root]
 title: 'Sampling and Empirical Distributions'
 prev_page:
   url: /chapters/09/5/Finding_Probabilities
@@ -11,6 +12,9 @@ next_page:
   title: 'Empirical Distributions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Sampling and Empirical Distributions
 An important part of data science consists of making conclusions based on the data in random samples. In order to correctly interpret their results, data scientists have to first understand exactly what random samples are.
@@ -34,7 +38,7 @@ top.set_format(make_array(3, 4), NumberFormatter)
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -101,7 +105,7 @@ top.take(make_array(3, 18, 100))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -137,7 +141,7 @@ top.where('Title', are.containing('Harry Potter'))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -225,7 +229,7 @@ top.take(np.arange(start, top.num_rows, 10))
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>

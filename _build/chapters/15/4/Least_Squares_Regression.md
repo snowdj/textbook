@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/15/4/least-squares-regression"
 interact_link: content/chapters/15/4/Least_Squares_Regression.ipynb
+kernel_name: python3
 title: 'Least Squares Regression'
 prev_page:
   url: /chapters/15/3/Method_of_Least_Squares
@@ -11,6 +12,12 @@ next_page:
   title: 'Visual Diagnostics'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
+
+
+
 
 ### Least Squares Regression
 In an earlier section, we developed formulas for the slope and intercept of the regression line through a *football shaped* scatter diagram. It turns out that the slope and intercept of the least squares line have the same formulas as those we developed, *regardless of the shape of the scatter plot*.
@@ -36,7 +43,7 @@ shotput
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -90,7 +97,9 @@ shotput.scatter('Weight Lifted')
 
 
 
-![png](../../../images/chapters/15/4/Least_Squares_Regression_3_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/15/4/Least_Squares_Regression_5_0.png)
+
 
 
 That's not a football shaped scatter plot. In fact, it seems to have a slight non-linear component. But if we insist on using a straight line to make our predictions, there is still one best straight line among all straight lines.
@@ -108,7 +117,7 @@ slope(shotput, 'Weight Lifted', 'Shot Put Distance')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.09834382159781997
 ```
@@ -126,7 +135,7 @@ intercept(shotput, 'Weight Lifted', 'Shot Put Distance')
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 5.959629098373952
 ```
@@ -160,7 +169,7 @@ minimize(shotput_linear_mse)
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([0.09834382, 5.95962911])
 ```
@@ -191,7 +200,9 @@ shotput.with_column('Best Straight Line', fitted).scatter('Weight Lifted')
 
 
 
-![png](../../../images/chapters/15/4/Least_Squares_Regression_11_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/15/4/Least_Squares_Regression_13_0.png)
+
 
 
 ### Nonlinear Regression
@@ -238,7 +249,7 @@ best
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 array([-1.04004838e-03,  2.82708045e-01, -1.53182115e+00])
 ```
@@ -262,7 +273,7 @@ meters. For example, if the athlete can lift 100 kilograms, the predicted distan
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 16.3382
 ```
@@ -289,5 +300,7 @@ shotput.with_column('Best Quadratic Curve', shotput_fit).scatter(0)
 
 
 
-![png](../../../images/chapters/15/4/Least_Squares_Regression_21_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/15/4/Least_Squares_Regression_23_0.png)
+
 

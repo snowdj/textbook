@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/10/3/empirical-distribution-of-a-statistic"
 interact_link: content/chapters/10/3/Empirical_Distribution_of_a_Statistic.ipynb
+kernel_name: python3
 title: 'Empirical Distibution of a Statistic'
 prev_page:
   url: /chapters/10/2/Sampling_from_a_Population
@@ -11,6 +12,9 @@ next_page:
   title: 'Testing Hypotheses'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
+
+
+
 
 ### Empirical Distribution of a Statistic
 The Law of Averages implies that with high probability, the empirical distribution of a large random sample will resemble the distribution of the population from which the sample was drawn.
@@ -32,13 +36,15 @@ united = Table.read_table(path_data + 'united_summer2015.csv')
 {:.input_area}
 ```python
 delay_bins = np.arange(-20, 201, 10)
-united.select('Delay').hist(bins = delay_bins, unit = 'minute')
+united.hist('Delay', bins = delay_bins, unit = 'minute')
 plots.title('Population');
 ```
 
 
 
-![png](../../../images/chapters/10/3/Empirical_Distribution_of_a_Statistic_2_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/3/Empirical_Distribution_of_a_Statistic_3_0.png)
+
 
 
 
@@ -46,13 +52,15 @@ plots.title('Population');
 {:.input_area}
 ```python
 sample_1000 = united.sample(1000)
-sample_1000.select('Delay').hist(bins = delay_bins, unit = 'minute')
+sample_1000.hist('Delay', bins = delay_bins, unit = 'minute')
 plots.title('Sample of Size 1000');
 ```
 
 
 
-![png](../../../images/chapters/10/3/Empirical_Distribution_of_a_Statistic_3_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/3/Empirical_Distribution_of_a_Statistic_4_0.png)
+
 
 
 The two histograms clearly resemble each other, though they are not identical. 
@@ -76,7 +84,7 @@ np.median(united.column('Delay'))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 2.0
 ```
@@ -89,14 +97,14 @@ The `NumPy` function `median` returns the median (half-way point) of an array. A
 
 {:.input_area}
 ```python
-united.where('Delay', are.below_or_equal_to(2)).num_rows/united.num_rows
+united.where('Delay', are.below_or_equal_to(2)).num_rows / united.num_rows
 ```
 
 
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 0.5018444846292948
 ```
@@ -118,7 +126,7 @@ united.where('Delay', are.equal_to(2)).num_rows
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 480
 ```
@@ -126,7 +134,7 @@ united.where('Delay', are.equal_to(2)).num_rows
 
 
 ### Statistic
-In many situations, we will be interested in figuring out the value of an unknown parameter. For this, we will rely on data from a large random sample from the population.
+In many situations, we will be interested in figuring out the value of an unknown parameter. For this, we will rely on data from a large random sample drawn from the population.
 
 A *statistic* (note the singular!) is any number computed using the data in a sample. The sample median, therefore, is a statistic. 
 
@@ -143,9 +151,9 @@ np.median(sample_1000.column('Delay'))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
-2.0
+3.0
 ```
 
 
@@ -166,9 +174,9 @@ np.median(united.sample(1000).column('Delay'))
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
-3.0
+2.0
 ```
 
 
@@ -184,24 +192,15 @@ We will simulate the sample median using the steps we set up in an earlier chapt
 
 **Step 1: Decide which statistic to simulate.** We have already decided that: we are going to simulate the median of a random sample of size 1000 drawn from the population of flight delays.
 
-**Step 2: Write the code to generate one value of the statistic.** Draw a random sample of size 1000 and compute the median of the sample. We did this in the code cell above. Here it is again for reference.
+**Step 2: Write the code to generate one value of the statistic.** Draw a random sample of size 1000 and compute the median of the sample. We did this in the code cell above. Here it is again, encapsulated in a function.
 
 
 
 {:.input_area}
 ```python
-np.median(united.sample(1000).column('Delay'))
+def random_sample_median():
+    return np.median(united.sample(1000).column('Delay'))
 ```
-
-
-
-
-
-{:.output_data_text}
-```
-2.0
-```
-
 
 
 **Step 3: Decide how many simulated values to generate.** Let's do 5,000 repetitions.
@@ -217,8 +216,7 @@ The simulation takes a noticeable amount of time to run. That is because it is p
 medians = make_array()
 
 for i in np.arange(5000):
-    new_median = np.median(united.sample(1000).column('Delay'))
-    medians = np.append(medians, new_median)
+    medians = np.append(medians, random_sample_median())
 ```
 
 
@@ -226,7 +224,7 @@ The simulation is done. All 5,000 simulated sample medians have been collected i
 
 ### Visualization
 
-Here are the simulated values displayed in the table `simulated_medians`.
+Here are the simulated random sample medians displayed in the table `simulated_medians`.
 
 
 
@@ -240,7 +238,7 @@ simulated_medians
 
 
 
-<div markdown="0">
+<div markdown="0" class="output output_html">
 <table border="1" class="dataframe">
     <thead>
         <tr>
@@ -249,34 +247,34 @@ simulated_medians
     </thead>
     <tbody>
         <tr>
+            <td>2            </td>
+        </tr>
+        <tr>
+            <td>2            </td>
+        </tr>
+        <tr>
+            <td>2.5          </td>
+        </tr>
+        <tr>
+            <td>1            </td>
+        </tr>
+        <tr>
+            <td>2            </td>
+        </tr>
+        <tr>
             <td>3            </td>
         </tr>
         <tr>
-            <td>3            </td>
-        </tr>
-        <tr>
             <td>2            </td>
-        </tr>
-        <tr>
-            <td>4            </td>
         </tr>
         <tr>
             <td>3            </td>
         </tr>
         <tr>
-            <td>2            </td>
+            <td>1            </td>
         </tr>
         <tr>
-            <td>2            </td>
-        </tr>
-        <tr>
-            <td>2            </td>
-        </tr>
-        <tr>
-            <td>4            </td>
-        </tr>
-        <tr>
-            <td>2            </td>
+            <td>3            </td>
         </tr>
     </tbody>
 </table>
@@ -296,10 +294,12 @@ simulated_medians.hist(bins=np.arange(0.5, 5, 1))
 
 
 
-![png](../../../images/chapters/10/3/Empirical_Distribution_of_a_Statistic_25_0.png)
+{:.output .output_png}
+![png](../../../images/chapters/10/3/Empirical_Distribution_of_a_Statistic_26_0.png)
 
 
-You can see that the sample median is very likely to be close to 2, which was the value of the population median. Since samples of 1000 flight delays are likely to resemble the population of delays, it is not surprising that the median delays of those samples should be close to the median delay in the population.
+
+You can see that the sample median is very likely to be about 2, which was the value of the population median. Since samples of 1000 flight delays are likely to resemble the population of delays, it is not surprising that the median delays of those samples should be close to the median delay in the population.
 
 This is an example of how a statistic can provide a good estimate of a parameter.
 
@@ -307,10 +307,10 @@ This is an example of how a statistic can provide a good estimate of a parameter
 
 If we could generate all possible random samples of size 1000, we would know all possible values of the statistic (the sample median), as well as the probabilities of all those values. We could visualize all the values and probabilities in the probability histogram of the statistic.
 
-But in many situations (including this one), the number of all possible samples is large enough to exceed the capacity of the computer, and purely mathematical calculations of the probabilities can be intractably difficult.
+But in many situations including this one, the number of all possible samples is large enough to exceed the capacity of the computer, and purely mathematical calculations of the probabilities can be intractably difficult.
 
 This is where empirical histograms come in.
 
-We know that by the Law of Averages, the empirical histogram of the statistic is likely to resemble the probability histogram of the statistic, if the sample size is large and if you repeat the sampling process numerous times.
+We know that by the Law of Averages, the empirical histogram of the statistic is likely to resemble the probability histogram of the statistic, if the sample size is large and if you repeat the random sampling process numerous times.
 
 This means that simulating random processes repeatedly is a way of approximating probability distributions *without figuring out the probabilities mathematically or generating all possible random samples*. Thus computer simulations become a powerful tool in data science. They can help data scientists understand the properties of random quantities that would be complicated to analyze in other ways.

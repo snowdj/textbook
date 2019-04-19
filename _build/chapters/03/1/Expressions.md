@@ -2,6 +2,7 @@
 redirect_from:
   - "/chapters/03/1/expressions"
 interact_link: content/chapters/03/1/Expressions.ipynb
+kernel_name: python3
 title: 'Expressions'
 prev_page:
   url: /chapters/03/programming-in-python
@@ -29,7 +30,7 @@ Programs are made up of *expressions*, which describe to the computer how to com
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 12
 ```
@@ -46,16 +47,17 @@ The grammar rules of a programming language are rigid. In Python, the `*` symbol
 ```
 
 
-
-{:.output_traceback_line}
-```
-  File "<ipython-input-2-012ea60b41dd>", line 1
-    3 * * 4
-        ^
-SyntaxError: invalid syntax
-
+{:.output .output_traceback_line}
 ```
 
+      File "<ipython-input-2-012ea60b41dd>", line 1
+        3 * * 4
+            ^
+    SyntaxError: invalid syntax
+
+
+
+```
 
 Small changes to an expression can change its meaning entirely. Below, the space between the `*`'s has been removed. Because `**` appears between two numerical expressions, the expression is a well-formed *exponentiation* expression (the first number raised to the power of the second: 3 times 3 times 3 times 3). The symbols `*` and `**` are called *operators*, and the values they combine are called *operands*.
 
@@ -70,7 +72,7 @@ Small changes to an expression can change its meaning entirely. Below, the space
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 81
 ```
@@ -101,7 +103,7 @@ Python expressions obey the same familiar rules of *precedence* as in algebra: m
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 17.555555555555557
 ```
@@ -119,7 +121,7 @@ Python expressions obey the same familiar rules of *precedence* as in algebra: m
 
 
 
-{:.output_data_text}
+{:.output .output_data_text}
 ```
 2017.0
 ```
