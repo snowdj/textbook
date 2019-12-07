@@ -28,15 +28,14 @@ url: https://www.inferentialthinking.com # the base hostname & protocol for your
 #######################################################################################
 # Jupyter Book settings
 
-# Notebook content settings
-hide_cell_text: '# HIDE CODE AND OUTPUT' # When building the textbook, any cells with this text inside will be hidden in the output markdown
-hide_code_text: '# HIDDEN'               # When building the textbook, any cells with this text inside will have *only* their output shown (no code)
-use_hide_code_button: true        # If True, a small button appears to the right of each cell that lets you hide its contents.
+# Main page settings
+footer_text: This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
+  Jupyter Book Community</a>
 
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
-textbook_logo: favicon.png                        # A logo to be displayed at the top of your textbook sidebar
+textbook_logo: favicon.png                        # A logo to be displayed at the top of your textbook sidebar. Should be square
 textbook_logo_link: https://inferentialthinking.org                      # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://github.com/choldgraf/jupyter-book">Jupyter
   Book</a>
@@ -62,13 +61,20 @@ binderhub_url: https://mybinder.org                        # The URL for your Bi
 binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
 binder_repo_org: data-8                       # The username or organization that owns this repository
 binder_repo_name: textbook                         # The name of the repository on the web
-binder_repo_branch: gh-pages                 # The branch on which your textbook is hosted.
+binder_repo_branch: gh-pages                   # The branch on which your textbook is hosted.
 binderhub_interact_text: Interact              # The text that interact buttons will contain.
 
 # Thebelab settings
 use_thebelab_button: false               # If 'true', display a button to allow in-page running code cells with Thebelab
 thebelab_button_text: Thebelab                 # The text to display inside the Thebelab initialization button
+codemirror_theme: abcdef                     # Theme for codemirror cells, for options see https://codemirror.net/doc/manual.html#config
 
+# nbinteract settings
+use_show_widgets_button: false               # If 'true', display a button to allow in-page running code cells with nbinteract
+
+# Download settings
+use_download_button: false               # If 'true', display a button to download a zip file for the notebook
+download_button_text: Download                # The text that download buttons will contain
 
 #######################################################################################
 # Jupyter book extensions and additional features
@@ -81,6 +87,8 @@ scholar:
 #######################################################################################
 # Jupyter book settings you probably don't need to change
 
+google_analytics:
+  mytrackingcode: 'UA-148221575-1'
 content_folder_name: content           # The folder where your raw content (notebooks/markdown files) are located
 images_url: /assets/images                   # Path to static image files
 css_url: /assets/css                      # Path to static CSS files
@@ -136,4 +144,4 @@ exclude:
 plugins:
 - jekyll-redirect-from
 - jekyll-scholar
-jupyter_book_version: 0.4.1
+jupyter_book_version: 0.6.2
